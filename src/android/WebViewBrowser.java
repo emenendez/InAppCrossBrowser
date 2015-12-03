@@ -187,6 +187,9 @@ public class WebViewBrowser extends CordovaPlugin {
         else if (action.equals("close")) {
             closeDialog();
         }
+        else if (action.equals("navigate")) {
+            inAppWebView.navigate(args.getString(0));
+        }
         else if (action.equals("injectScriptCode")) {
             String jsWrapper = null;
             if (args.getBoolean(1)) {

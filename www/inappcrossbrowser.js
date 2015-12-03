@@ -40,6 +40,9 @@ InAppBrowser.prototype = {
             this.channels[event.type].fire(event);
         }
     },
+    navigate: function (href) {
+        exec(null, null, cmd, "navigate", [href]);
+    },
     close: function (eventname) {
         exec(null, null, cmd, "close", []);
     },
